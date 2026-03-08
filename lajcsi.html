@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <style>
+        #foresz{
+            display:  flex;
+            flex-direction: column;
+            height: 100vh;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            background: orange;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function(){
+            const meretek = document.getElementById('meretek');
+            
+            let szelesseg = window.innerWidth;
+            let magassag = window.innerHeight;
+
+            meretek.innerHTML = `Semmi: <b>${szelesseg}px</b>, (V)ész): <b>${magassag}px</b>`;
+
+            const bttn=document.getElementById('bttn');
+        bttn.addEventListener('click',function(){
+            location.reload();
+        } );
+        });
+
+        
+    </script>
+</head>
+<body>
+    <div id="foresz">
+        <p id="meretek"></p>
+        
+        <p>
+            <button id="bttn" style="min-width: 50px; padding: 5px 10px;">Reload</button>
+        </p>
+    </div>
+</body>
